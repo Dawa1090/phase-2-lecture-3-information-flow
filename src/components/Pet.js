@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-function Pet({pet}){
+function Pet({pet, adoptPet}){
 
     const [favorite, setFavorite] = useState(false)
 
