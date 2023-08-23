@@ -7,13 +7,15 @@ function Pet({pet}){
     function toggleFavorite(){
         setFavorite((favorite) => !favorite)
     }
+
+
     
     return (
         <li className="pet">
             <img src={pet.image} alt={pet.name} />
             <button onClick={toggleFavorite} className={favorite ? "favorite-button active" : "favorite-button"}>{favorite ? '★' : '☆'}</button>
             <h4>{pet.name}</h4>
-            <button className="adopt-button">Adopt</button>
+            <button onClick={() => adoptPet(pet.id)}  className="adopt-button">Adopt</button>
         </li>
     )
 }

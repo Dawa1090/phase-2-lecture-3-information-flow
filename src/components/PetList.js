@@ -3,7 +3,7 @@ import Pet from "./Pet"
 function PetList({pets}){
 
     const petComponents = pets.map(pet => {
-        return <Pet key={pet.id} pet={pet}/>
+        return <Pet key={pet.id} pet={pet} adoptPet={adoptPet}/>
     })
 
     return (
